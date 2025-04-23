@@ -19,7 +19,10 @@ function enviarDatos(){
 
 function consultaAPI(ciudad,fecha1,fecha2){
     // URL de la API
-    let url = `http://localhost:5000/api/get_weather/${ciudad}`;
+    const API_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:5000' 
+    : 'https://weather-api-7vvp.onrender.com';
+    let url = `${API_URL}/api/get_weather/${ciudad}`;
     
 
     if (fecha1 !== undefined && fecha1 !== "") {
