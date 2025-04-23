@@ -1,0 +1,335 @@
+/* ===== Estilos Generales ===== */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c3e50;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: #3498db;
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: -1px;
+    font-weight: 700;
+}
+
+/* ===== Contenedor Principal ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== Sección Buscador ===== */
+.buscador {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.buscador h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.buscador p {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-size: 1.1em;
+}
+
+/* ===== Input Grupo ===== */
+.input-grupo {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.input-grupo input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.input-grupo input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.input-grupo input::placeholder {
+    color: #95a5a6;
+}
+
+/* ===== Botones ===== */
+.botones {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.boton-tech {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.boton-tech:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* ===== Tooltip ===== */
+.info-btn-container {
+    position: relative;
+    display: inline-block;
+}
+
+.info-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.info-btn:hover {
+    background: #2980b9;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 220px;
+    background: rgba(44, 62, 80, 0.95);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.info-btn-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(44, 62, 80, 0.95) transparent transparent transparent;
+}
+
+/* ===== Footer ===== */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+.tarjeta-consulta {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-ciudad {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+}
+
+/* Tarjeta por día */
+.tarjeta-dia {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-dia:hover {
+    transform: translateY(-5px);
+}
+
+.dia-fecha {
+    color: #3498db;
+    font-size: 1.8em;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.info-general {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Contenedor de horas con scroll horizontal */
+.tarjetas-horas {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #3498db #f0f0f0;
+}
+
+.tarjetas-horas::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tarjetas-horas::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.tarjetas-horas::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 4px;
+}
+
+/* Tarjeta por hora */
+.tarjeta-hora {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.tarjeta-hora:hover {
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.15);
+    transform: scale(1.02);
+}
+
+.hora-header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.hora-marcador {
+    color: #3498db;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.detalles-clima p {
+    margin: 0.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detalles-clima strong {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.detalles-clima .valor {
+    color: #e74c3c;
+    font-weight: 600;
+    background: rgba(231, 76, 60, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tarjeta-dia {
+        padding: 1.5rem;
+    }
+    
+    .info-general {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .tarjeta-hora {
+        min-width: 250px;
+    }
+}
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .input-grupo {
+        flex-direction: column;
+    }
+    
+    .input-grupo input {
+        width: 100%;
+    }
+    
+    .botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .boton-tech {
+        width: 100%;
+    }
+    
+    .info-btn-container {
+        align-self: center;
+    }
+}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <section class="container buscador">
+        <h2>Bienvenido</h2>
+        <p>Empieze a usar Tap-Wheater</p>
+
+        <div class="input-grupo">
+            <input type="text" id="ciudad" placeholder="Ciudad" />
+            <input type="date" id="fecha1" placeholder="Primer fecha (Opcional)" />
+            <input type="date" id="fecha2" placeholder="Segunda fecha (Opcional)" />
+        </div>
+          
+        <div class="botones">
+            <button id="btn-search"class="boton-tech">Consultar Clima</button>
+            <div class="info-btn-container">
+                <button class="info-btn">i</button>
+                <span class="tooltip">No especifiques fechas si quieres el pronostico de hoy, 
+                    especifica solo la primera fecha si quieres el pronostocio de un dia en especifico, 
+                    especifica ambas fechas si quieres el pronostico de un rango de dias</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container" id="resultado"></section>
+{% endblock %}
