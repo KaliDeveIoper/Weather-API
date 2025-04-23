@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: tap-weather
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn run:application"  # Cambia "app" por el nombre de tu archivo principal

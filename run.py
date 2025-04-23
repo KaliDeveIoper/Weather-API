@@ -16,9 +16,9 @@ assert frontend_app is not None, "Frontend app no se creó correctamente."
 app = DispatcherMiddleware(frontend_app, {
     '/api': backend_app
 })
-
+application = app
 
 
 if __name__ == "__main__":
-    run_simple('localhost', 5000, app, use_reloader=True)
+    run_simple('localhost', 5000, application, use_reloader=True)
 #Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
